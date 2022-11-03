@@ -9,7 +9,7 @@
  */
 
 import React from "react";
-import { SafeAreaView, ScrollView, StatusBar, Text, useColorScheme, View } from "react-native";
+import { SafeAreaView, ScrollView, Text, useColorScheme, View } from "react-native";
 
 import { Colors } from "react-native/Libraries/NewAppScreen";
 
@@ -29,7 +29,7 @@ const App = () => {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Text>Hello World!</Text>
+          <Text>Hello World! This is my first native app.</Text>
         </View>
       </ScrollView>
     </SafeAreaView>
