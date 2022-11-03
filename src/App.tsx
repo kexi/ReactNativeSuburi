@@ -9,15 +9,19 @@
  */
 
 import React from "react";
-import { SafeAreaView, ScrollView, Text, useColorScheme, View } from "react-native";
-
-import { Colors } from "react-native/Libraries/NewAppScreen";
+import { SafeAreaView, ScrollView, StyleSheet, Text, TextStyle, useColorScheme, View } from "react-native";
 
 const App = () => {
   const isDarkMode = useColorScheme() === "dark";
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: isDarkMode ? "#dd0000" : "#ffffff",
+  };
+
+  const testStyle: TextStyle = {
+    color: "#ff0000",
+    fontSize: 80,
+
   };
 
   return (
@@ -26,14 +30,16 @@ const App = () => {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Text>Hello World! This is my first native app.</Text>
+          style={styles.container}>
+          <Text style={testStyle}>Hello World!</Text>
         </View>
       </ScrollView>
     </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {},
+})
 
 export default App;
